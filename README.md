@@ -13,6 +13,7 @@ Also live:
 
 - [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit): a low kappa says your judge panel is broken; this decomposes *why* (item ambiguity vs rubric underspecification), so you fix the right thing.
 - [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal.
+- [trace-gate](https://github.com/homayoun-safarpour/trace-gate): gates a deploy on agent trajectory scores pinned to a frozen baseline (exit 0/2), so tool-use regressions fail CI the same way unit tests do.
 
 ## What I'm building against
 
@@ -44,4 +45,4 @@ Also live:
 ## Contact
 
 - GitHub: [@homayoun-safarpour](https://github.com/homayoun-safarpour)
-- LinkedIn: _add your LinkedIn URL here_
+- LinkedIn: [homayoun-safarpour](https://www.linkedin.com/in/homayoun-safarpour/)
