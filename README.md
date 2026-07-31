@@ -15,6 +15,19 @@ Also live:
 - [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal.
 - [trace-gate](https://github.com/homayoun-safarpour/trace-gate): gates a deploy on agent trajectory scores pinned to a frozen baseline (exit 0/2), so tool-use regressions fail CI the same way unit tests do.
 
+## Fork these first
+
+Each repo is meant to be cloned and run in under 30 minutes. Start with the worked example, not the source tree.
+
+| Repo | Clone and run | Fixture data already in-repo |
+| --- | --- | --- |
+| [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | `examples/worked_example.py` | `examples/judge_panel_ratings.json` |
+| [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | README Quickstart (`baseline` / `check`) | `examples/anchors.jsonl`, `examples/run_*.json` |
+| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | README Quickstart on `examples/LOOP_STATE.md` | `examples/LOOP_STATE.md`, `examples/journal/` |
+| [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | README Quickstart (`freeze` / `check`) | `examples/trajectories/`, `examples/rubric.json` |
+
+Stack wiring: sentinel and trace-gate speak exit `0`/`2` so [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) can treat them as quality gates. Kit panel exports feed the sentinel adapter.
+
 ## What I'm building against
 
 - **LLM-judge drift is a named 2026 failure mode with prescribed but un-toolified ops**
