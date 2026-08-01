@@ -36,7 +36,7 @@ Stack wiring: sentinel and trace-gate speak exit `0`/`2` so [agent-loop-engine](
   that ops loop as a CLI.
 - **Evals and observability top the hiring gap**: observability appears in 42% and CI/CD in
   33.9% of 43k AI-engineering postings (axialsearch.com, read 2026-08-03); evaluation is
-  called "the highest-leverage gap to close". → judge-reliability-kit and judge-drift-sentinel
+  called the top gap to close (axialsearch.com, read 2026-08-03). → judge-reliability-kit and judge-drift-sentinel
   are evaluation infrastructure; every repo wires into CI.
 - **Constraint drift in long-horizon agents is measured but un-toolified**: DRIFT-Bench
   reports 3.4x constraint-violation growth across task quartiles (2026 benchmark, surveyed
