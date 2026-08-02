@@ -14,6 +14,9 @@ Also live:
 - [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit): a low kappa says your judge panel is broken; this decomposes *why* (item ambiguity vs rubric underspecification), so you fix the right thing.
 - [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal.
 - [trace-gate](https://github.com/homayoun-safarpour/trace-gate): gates a deploy on agent trajectory scores pinned to a frozen baseline (exit 0/2), so tool-use regressions fail CI the same way unit tests do.
+- [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service): FastAPI RAG evaluation with hit@k / MRR and a frozen-metric regression gate (`corpus_sha256`), so corpus edits cannot hide under old numbers.
+- [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench): multi-axis agent scorecard (task success, reliability, bias gap, named failure modes) with `--min-composite` exit 2.
+- [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline): sklearn + MLflow training with a data/params signature hash verified in CI.
 
 ## Fork these first
 
@@ -25,6 +28,9 @@ Each repo is meant to be cloned and run in under 30 minutes. Start with the work
 | [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | README Quickstart (`baseline` / `check`) | `examples/anchors.jsonl`, `examples/run_*.json` |
 | [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | README Quickstart on `examples/LOOP_STATE.md` | `examples/LOOP_STATE.md`, `examples/journal/` |
 | [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | README Quickstart (`freeze` / `check`) | `examples/trajectories/`, `examples/rubric.json` |
+| [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) | README Quickstart (`evaluate` / `check`) | `examples/corpus.json`, `examples/cases.json`, `examples/baseline_v1.json` |
+| [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | README Quickstart (`score`) | `examples/bundle_*.json`, `examples/scorecard_mixed.json` |
+| [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) | README Quickstart (`train` / `verify-signature`) | `examples/artifacts/run_signature.json`, `examples/train_summary.json` |
 
 Stack wiring: sentinel and trace-gate speak exit `0`/`2` so [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) can treat them as quality gates. Kit panel exports feed the sentinel adapter.
 
