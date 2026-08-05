@@ -1,12 +1,12 @@
 # Homayoun Safarpour
 
-**AI engineer. Evaluation, reliability, and trust for LLM and agent systems.**
+**AI engineer specializing in evaluation, reliability, and trust for LLM and agent systems.**
 
-I build production-facing instruments for when machines judge: disagreement diagnosis, judge-drift attribution, deterministic agent loops, and CI gates with exit codes you can wire into pipelines. One public ship per week, daily commits, tests + CI on Python 3.10–3.12 from commit one. Every README claim is backed by a named test. Deterministic cores; zero LLM dependency in the measurement path.
+I ship small production instruments for when machines judge: disagreement diagnosis, judge-drift attribution, deterministic agent loops, and CI gates with exit codes you can wire into pipelines. Tests and CI cover Python 3.10-3.12. Every README claim maps to a named test. Measurement cores stay deterministic (no LLM in the scoring path).
 
-## Shipping daily
+## Active instruments
 
-**This week: [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel).**
+**Current focus: [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel).**
 When eval scores move, it tells you whether your system changed or your LLM judge did, by re-scoring a frozen human-labeled anchor set and comparing agreement against the pinned baseline. Deterministic core, no LLM dependency, exit codes built for CI gates.
 
 Also live:
