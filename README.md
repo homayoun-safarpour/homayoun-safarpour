@@ -18,9 +18,9 @@ Also live:
 - [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench): controlled YAML scenarios plus trace-derived detectors (tool/order/loop/citation) and uncertainty-aware group diagnostics; `--min-composite` returns exit 2.
 - [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline): local-first train → MLflow register → FastAPI serve path with a data/env/code/params/seed signature verified in CI and Compose smoke.
 
-## Fork these first
+## Start here
 
-Each repo is meant to be cloned and run in under 30 minutes. Start with the worked example, not the source tree.
+Each instrument is meant to be cloned and run in under 30 minutes. Begin with the worked example, not the source tree.
 
 | Repo | Clone and run | Fixture data already in-repo |
 | --- | --- | --- |
