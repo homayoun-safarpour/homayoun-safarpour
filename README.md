@@ -1,8 +1,8 @@
-# Homayoun Safarpour
+# Evaluation, reliability, and trust for LLM and agent systems
 
-**AI engineer specializing in evaluation, reliability, and trust for LLM and agent systems.**
+**Homayoun Safarpour** - AI engineer. Instruments for when machines judge: disagreement diagnosis, judge-drift attribution, deterministic agent loops, and CI gates with exit codes you can wire into pipelines.
 
-I ship small production instruments for when machines judge: disagreement diagnosis, judge-drift attribution, deterministic agent loops, and CI gates with exit codes you can wire into pipelines. Tests and CI cover Python 3.10-3.12. Every README claim maps to a named test. Measurement cores stay deterministic (no LLM in the scoring path).
+Tests and CI cover Python 3.10-3.12. Every README claim maps to a named test. Measurement cores stay deterministic (no LLM in the scoring path).
 
 ## Active instruments
 
