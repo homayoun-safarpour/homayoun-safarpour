@@ -12,7 +12,8 @@ When eval scores move, it tells you whether your system changed or your LLM judg
 Also live:
 
 - [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit): a low kappa says your judge panel is broken; this decomposes *why* (item ambiguity vs rubric underspecification), so you fix the right thing.
-- [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal. Includes a [field guide](https://github.com/homayoun-safarpour/agent-loop-engine/blob/main/docs/FIELD_GUIDE.md) (Anthropic + high-star loop sources → five-decision Loop Contract).
+- [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal.
+- [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide): fill a five-decision Loop Contract before you automate (Anthropic + high-star loop sources distilled into templates you can copy into any project).
 - [trace-gate](https://github.com/homayoun-safarpour/trace-gate): gates a deploy on agent trajectory scores pinned to a frozen baseline (exit 0/2), so tool-use regressions fail CI the same way unit tests do.
 - [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service): FastAPI ingest/query RAG path with Qdrant Compose, offline lexical judge, and a frozen hit@k/MRR gate (`corpus_sha256`) so corpus edits cannot hide under old numbers.
 - [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench): controlled YAML scenarios plus trace-derived detectors (tool/order/loop/citation) and uncertainty-aware group diagnostics; `--min-composite` returns exit 2.
@@ -26,7 +27,8 @@ Each instrument is meant to be cloned and run in under 30 minutes. Begin with th
 | --- | --- | --- |
 | [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | `examples/worked_example.py` | `examples/judge_panel_ratings.json` |
 | [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | README Quickstart (`baseline` / `check`) | `examples/anchors.jsonl`, `examples/run_*.json` |
-| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | README Quickstart + [Field guide](https://github.com/homayoun-safarpour/agent-loop-engine/blob/main/docs/FIELD_GUIDE.md) | `examples/LOOP_STATE.md`, `examples/loop_contract/`, `examples/journal/` |
+| [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide) | `cp templates/LOOP_CONTRACT.md` then fill | `templates/`, `docs/FIELD_GUIDE.md` |
+| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | README Quickstart on `examples/LOOP_STATE.md` | `examples/LOOP_STATE.md`, `examples/loop_contract/`, `examples/journal/` |
 | [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | README Quickstart (`freeze` / `check`) | `examples/trajectories/`, `examples/rubric.json` |
 | [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) | `python scripts/run_example.py` then `rag-eval check` | `examples/corpus.json`, `examples/baseline_v1.json`, `examples/BENCHMARK_REPORT.md` |
 | [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | `agent-eval run examples/scenarios/benchmark.yaml` then `score` | `examples/scenarios/benchmark.yaml`, `examples/benchmark_results.json` |
