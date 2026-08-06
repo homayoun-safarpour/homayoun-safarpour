@@ -11,6 +11,7 @@ When eval scores move, it tells you whether your system changed or your LLM judg
 
 Also live:
 
+- [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range): 56 named skills and 24 graded katas with deterministic exit-code graders (eval, RAG, agents, repro, harness) — craft practice an org or bot can score.
 - [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit): a low kappa says your judge panel is broken; this decomposes *why* (item ambiguity vs rubric underspecification), so you fix the right thing.
 - [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine): a self-advancing agent loop with markdown state, quality gates, a deterministic three-rule decision policy, and an append-only journal, so agent behavior is auditable instead of anecdotal.
 - [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide): fill a five-decision Loop Contract before you automate (Anthropic + high-star loop sources distilled into templates you can copy into any project).
@@ -25,6 +26,7 @@ Each instrument is meant to be cloned and run in under 30 minutes. Begin with th
 
 | Repo | Clone and run | Fixture data already in-repo |
 | --- | --- | --- |
+| [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range) | `skillrange grade K01 --submission katas/K01-loop-contract/fixtures/pass` | `skills/SKILL_MAP.md`, `katas/K01`…`K24` |
 | [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | `examples/worked_example.py` | `examples/judge_panel_ratings.json` |
 | [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | README Quickstart (`baseline` / `check`) | `examples/anchors.jsonl`, `examples/run_*.json` |
 | [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide) | `cp templates/LOOP_CONTRACT.md` then fill | `templates/`, `docs/FIELD_GUIDE.md` |
