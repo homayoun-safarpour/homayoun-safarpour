@@ -1,23 +1,28 @@
-# Evaluation, reliability, and trust for LLM and agent systems
+# Instruments for LLM / agent evaluation and reliability
 
-**Homayoun Safarpour** : AI engineer. Open instruments for when machines judge: deterministic cores, CI exit codes, named tests on every README claim (Python 3.10–3.12).
+This is a **profile README** (not a product). The public work lives in the named repos below — clone those, not this page.
 
-## Instruments
+## Projects
 
-| Pain | Repo |
+| Project | What it does |
 | --- | --- |
-| Eval scores moved after a model swap : is it your system or judge drift? | [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) |
-| Low kappa on the judge panel : rubric or item ambiguity? | [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) |
-| Agent keeps shipping while gates are red : need repair-before-advance | [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) |
-| Need graded, exit-code katas an org or bot can score | [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range) |
+| [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | Eval score moved: was it the system or the LLM judge? Frozen anchors + CI exit codes. |
+| [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | Low panel kappa: item ambiguity vs rubric underspecification. |
+| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | State → gates → decide → journal. Repair before advance. |
+| [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide) | Five-decision Loop Contract template before you automate. |
+| [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | Trajectory score vs frozen baseline; fail-closed deploy gate. |
+| [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) | RAG ingest/query + frozen hit@k / MRR check. |
+| [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | Scenario traces + detectors; `--min-composite` exit 2. |
+| [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) | Train → register → serve with a verified run signature. |
+| [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range) | 56 skills / 24 graded katas (`skillrange grade`, exit 0/2). |
 
-Each repo includes a worked example (clone → run in under 30 minutes) and **`docs/INTERVIEW.md`** : design choices, failure modes, and how to demo it in a technical conversation.
+Shared contract: Python 3.10–3.12 CI, named tests behind README claims, deterministic cores where the README says so. Sentinel and trace-gate speak exit `0`/`2` so agent-loop-engine can use them as gates.
 
-More live tools: [trace-gate](https://github.com/homayoun-safarpour/trace-gate) (trajectory CI gates), [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) (frozen RAG hit@k/MRR), [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) (YAML scenarios + trace detectors), [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide) (loop contract templates), [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) (train → serve signature verify).
+## Start here
 
-Sentinel and trace-gate use exit `0`/`2` so agent-loop-engine can wire them as quality gates; kit panel exports feed the sentinel adapter.
+Pick one repo. Run the README Quickstart / worked example (under 30 minutes). Each ships fixtures in-repo; most have `docs/INTERVIEW.md` with CLI talking points.
 
-## Contact
+## Links
 
 - GitHub: [@homayoun-safarpour](https://github.com/homayoun-safarpour)
 - LinkedIn: [homayoun-safarpour](https://www.linkedin.com/in/homayoun-safarpour/)
