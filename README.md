@@ -13,6 +13,7 @@ Public tools for LLM / agent evaluation and reliability. This GitHub profile pag
 | [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | Scenario traces + detectors |
 | [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) | Train, register, serve + signature |
 | [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range) | 56 skills / 24 graded katas |
+| [judge-field-guide](https://github.com/homayoun-safarpour/judge-field-guide) | Link-checked map of the judge tool ecosystem |
 
 Python 3.10-3.12 CI. Named tests behind README claims. Start with any Quickstart (under 30 minutes).
 
