@@ -1,6 +1,6 @@
-# Projects
+﻿# Projects
 
-Public tools for LLM / agent evaluation and reliability. This GitHub profile page is only an index — clone a named project below, not this repo.
+Public tools for LLM / agent evaluation and reliability. This GitHub profile page is only an index - clone a named project below, not this repo.
 
 | Project | Job |
 | --- | --- |
