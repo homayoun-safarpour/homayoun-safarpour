@@ -1,6 +1,10 @@
-# Projects
+# Homayoun Safarpour
 
-Public tools for LLM / agent evaluation and reliability. This GitHub profile page is only an index - clone a named project below, not this repo.
+**AI engineer specializing in evaluation, reliability, and trust for LLM and agent systems.**
+
+**Start here:** [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) (`pip install judge-drift-sentinel`). Frozen human anchors tell you whether an eval score moved because the system changed or the LLM judge did.
+
+This GitHub profile page is an index. Clone a named project below, not this repo.
 
 | Project | Job |
 | --- | --- |
@@ -16,7 +20,7 @@ Public tools for LLM / agent evaluation and reliability. This GitHub profile pag
 | [agent-constraint-auditor](https://github.com/homayoun-safarpour/agent-constraint-auditor) | Audit agent transcripts for declared-constraint decay |
 | [judge-field-guide](https://github.com/homayoun-safarpour/judge-field-guide) | Link-checked map of the judge tool ecosystem |
 
-Python 3.10-3.12 CI. Named tests behind README claims. Start with any Quickstart (under 30 minutes).
+Python 3.10-3.12 CI. Named tests behind README claims. Quickstart under 30 minutes.
 
 ## Links
 
