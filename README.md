@@ -1,10 +1,28 @@
-# Homayoun Safarpour
+# Homayoun
 
-**AI engineer specializing in evaluation, reliability, and trust for LLM and agent systems.**
+**Eval score moved. You cannot tell whether the system regressed or the judge did.**
 
-**Start here:** [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) (`pip install judge-drift-sentinel`). Frozen human anchors tell you whether an eval score moved because the system changed or the LLM judge did.
+judge-drift-sentinel · judge-reliability-kit · agent-loop-engine · trace-gate · ai-eng-skill-range
 
-This GitHub profile page is an index. Clone a named project below, not this repo.
+```bash
+pip install judge-drift-sentinel
+git clone https://github.com/homayoun-safarpour/judge-drift-sentinel
+cd judge-drift-sentinel
+drift-sentinel check --anchors examples/anchors.jsonl --baseline examples/run_baseline.json --current examples/run_current.json
+```
+
+```text
+verdict      : JUDGE_DRIFT
+anchor kappa : 0.833 -> 0.333
+anchor flips : 25.0% of frozen anchors changed label
+judge pin    : CHANGED frontier-4-2026-05-01@9f2c1a -> frontier-4-latest@9f2c1a
+live metric  : moved -0.150
+reason       : agreement with the frozen human labels fell (0.833 -> 0.333); the ruler moved, not the system
+```
+
+That command exits 2. Clone a named project below, not this profile repo.
+
+## Projects
 
 | Project | Job |
 | --- | --- |
