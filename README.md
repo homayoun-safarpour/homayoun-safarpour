@@ -4,7 +4,7 @@
 
 I build **fail-closed gates** for agent / judge / RAG systems — deterministic exit codes, frozen anchors, no vibe scores.
 
-Ireland · Trustworthy AI / agentic systems · hire-facing OSS
+Trustworthy AI / agentic systems · hire-facing OSS
 
 ```bash
 pip install -e ".[dev]"   # in any gate repo below
