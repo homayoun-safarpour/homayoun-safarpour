@@ -1,58 +1,47 @@
 # Homayoun Safarpour
 
-**Agent CI stays green while the run is truncated, the handoff is `null`, or the MCP surface is wide open.**
+I build Python tools for agent reliability, LLM evaluation, and reproducible ML.
 
-I build **fail-closed gates** for agent / judge / RAG systems — deterministic exit codes, frozen anchors, no vibe scores.
+My focus is **fail-closed checks**: explicit pass/fail signals, frozen baselines, and evidence you can inspect. A green CI run should mean the checks actually ran.
 
-Trustworthy AI / agentic systems · hire-facing OSS
+## Agent reliability
 
-```bash
-pip install -e ".[dev]"   # in any gate repo below
-homi-gate check-completion examples/pass.json
-homi-gate check-handoff examples/handoff_ok.json
-homi-gate check-mcp-allowlist examples/mcp_ok.yaml
-```
+| Project | What it does |
+| --- | --- |
+| [homi-gate](https://github.com/homayoun-safarpour/homi-gate) | Checks completion, handoffs, MCP tool-access configuration, tool calls, and trajectories |
+| [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | Gates trajectory regressions against a frozen baseline and pinned rubric |
+| [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | Tracks judge agreement with frozen human anchors across runs |
+| [agent-constraint-auditor](https://github.com/homayoun-safarpour/agent-constraint-auditor) | Audits transcripts against declared regex constraints |
+| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | Chooses one bounded next action from state and quality gates, then journals the decision |
 
-Clone a **named project** below — not this profile repo.
+Start with **homi-gate** for run and handoff checks, **trace-gate** for trajectory regressions, or **judge-drift-sentinel** when judge scores move.
 
-## Gate stack (start here)
+## Evaluation and ML
 
-| Repo | Job | Fail signal |
-|------|-----|-------------|
-| [homi-gate](https://github.com/homayoun-safarpour/homi-gate) | Completion · handoff · MCP allowlist | exit `1` |
-| [trace-gate](https://github.com/homayoun-safarpour/trace-gate) | Trajectory vs frozen baseline | exit `2` |
-| [judge-drift-sentinel](https://github.com/homayoun-safarpour/judge-drift-sentinel) | Score moved: system or judge? | exit `2` |
-| [agent-constraint-auditor](https://github.com/homayoun-safarpour/agent-constraint-auditor) | Declared-constraint decay in transcripts | exit `2` |
-| [agent-loop-engine](https://github.com/homayoun-safarpour/agent-loop-engine) | State · gates · one action · journal | bounded loop |
+| Project | What it does |
+| --- | --- |
+| [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | Measures judge agreement and repeated-rating consistency to diagnose disagreement |
+| [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | Runs scenario-based evaluations with trace-derived failure detectors |
+| [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) | Checks retrieval metrics against frozen hit@k and MRR baselines |
+| [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) | Connects scikit-learn, MLflow, and FastAPI with a locked environment and run-signature checks |
 
-## Eval & hire labs
+## Guides and practice
 
-| Repo | Job |
-|------|-----|
-| [judge-reliability-kit](https://github.com/homayoun-safarpour/judge-reliability-kit) | Why a judge panel disagrees (κ) |
-| [agent-eval-workbench](https://github.com/homayoun-safarpour/agent-eval-workbench) | Scenario traces + detectors |
-| [rag-eval-service](https://github.com/homayoun-safarpour/rag-eval-service) | Frozen RAG hit@k / MRR gates |
-| [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range) | 56 skills / 24 graded katas |
-| [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide) | Loop Contract before you automate |
-| [judge-field-guide](https://github.com/homayoun-safarpour/judge-field-guide) | Link-checked judge-tool map |
-| [repro-ml-pipeline](https://github.com/homayoun-safarpour/repro-ml-pipeline) | sklearn → MLflow → FastAPI + signature CI |
+- [ai-eng-skill-range](https://github.com/homayoun-safarpour/ai-eng-skill-range): offline engineering exercises with pass/fail graders
+- [agent-loop-field-guide](https://github.com/homayoun-safarpour/agent-loop-field-guide): a five-decision Loop Contract, templates, and a heading checker
+- [judge-field-guide](https://github.com/homayoun-safarpour/judge-field-guide): a curated judge-tool registry with schema and link checks
 
-## How I ship (house style)
+## How I work
 
-1. Lead with the **failure mode**, not the stack  
-2. Pass + fail demo in one screen — **no API key**  
-3. Table the asserts (command · pass · fail)  
-4. Non-goals + composition (beside frameworks, not instead)  
-5. Loud falsifier — claim dies if examples don’t go red  
+- Start with a concrete failure mode
+- Show passing and failing examples
+- Make criteria, baselines, and exit codes explicit
+- Document limits and how each tool fits alongside other systems
 
-## Weekly field remix (public)
-
-Every week I take one strong public pattern (Promptfoo / DeepEval / AgentEvals / ECT / Hamel-style judges) and ship a **thin Homi remix**: same house voice, CI-green, hire-signal labels. Series tag: `field-remix`.
+Open a project above for its quickstart, tests, and limitations. Setup differs by project; this repository is the profile index.
 
 ## Links
 
-- GitHub: [@homayoun-safarpour](https://github.com/homayoun-safarpour)  
-- LinkedIn: [in/homayoun-safarpour](https://www.linkedin.com/in/homayoun-safarpour/)  
-- ORCID: [0000-0002-3206-5357](https://orcid.org/0000-0002-3206-5357)
-
-Python 3.10–3.12 CI. Claims backed by named tests. Quickstarts under ~30 minutes.
+- [GitHub](https://github.com/homayoun-safarpour)
+- [LinkedIn](https://www.linkedin.com/in/homayoun-safarpour/)
+- [ORCID: 0000-0002-3206-5357](https://orcid.org/0000-0002-3206-5357)
